@@ -1,6 +1,10 @@
-
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
 body{
-    background-color: #416788;
+    background-color: #9cd1ff;
     color: #E0E0E2;
     font-family: 'Jomhuria', cursive;
     font-size: 40px;
@@ -13,3 +17,24 @@ img
 
 }
 
+.rounded-image {
+    border-radius: 30%;
+    width: 200px;
+    height: 200px;
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 20px; 
+    margin-top: 20px; 
+    object-fit: cover; /* Serve per non deformare l'immagine */
+}
+
+/*section*/
+
+.hero-section{
+
+    display: block;
+    width: 100%;
+    
+    background-color: palevioletred;
+}
+ 6
