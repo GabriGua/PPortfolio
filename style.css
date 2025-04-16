@@ -4,11 +4,12 @@
     box-sizing: border-box;
   }
 body{
-    background-color: #9cd1ff;
-    color: #E0E0E2;
+    background-color: #C2FBEF;
+    color: #1E3231;
     font-family: 'Jomhuria', cursive;
     font-size: 40px;
     letter-spacing: 4px;
+    box-shadow: 0 0 20px 10px rgba(255, 255, 255, 0.7);
 }
 
 img
@@ -19,14 +20,25 @@ img
 
 .rounded-image {
     border-radius: 30%;
+    box-shadow: 0 0 20px 10px rgba(255, 255, 255, 0.7);
     width: 200px;
     height: 200px;
     display: flex;
     justify-content: flex-end;
-    margin-right: 20px; 
+    margin-right: 40px; 
     margin-top: 20px; 
     object-fit: cover; /* Serve per non deformare l'immagine */
 }
+
+.passion-image {
+    width: 200px;
+    height: 200px;
+    position: absolute; /* <-- questa è la chiave */
+    top: 270px;           /* distanza dall’alto */
+    left: 110px;         /* distanza da sinistra */
+    z-index: 2;
+    pointer-events: none; /* opzionale: evita che l'immagine blocchi click sotto */
+  }
 
 /*section*/
 
@@ -34,7 +46,76 @@ img
 
     display: block;
     width: 100%;
+    padding-bottom: 50px;
     
-    background-color: palevioletred;
+    background-color: #7DAA92;
 }
- 6
+
+.timeline-section{
+    display: block;
+    width: 100%;
+    
+    background-color: #C2FBEF;
+}
+.timeline-container {
+    width: 100%;
+    overflow-x: auto;
+    z-index: 1;
+  }
+  
+  .timeline {
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    align-items: center;
+    padding: 60px 20px;
+    min-width: 800px;
+    z-index: 1;
+  }
+  
+  .timeline::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    height: 4px;
+    width: 100%;
+    background-color: #ff0000;
+    transform: translateY(-50%);
+    z-index: 0;
+  }
+  
+  .timeline-point {
+    position: relative;
+    text-align: center;
+    flex: 1;
+  }
+  
+  .point {
+    width: 20px;
+    height: 20px;
+    background-color: #3498db;
+    border-radius: 50%;
+    border: 4px solid white;
+    box-shadow: 0 0 0 2px #3498db;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+  }
+  
+  .date {
+    
+    margin-top: 10px;
+    font-weight: bold;
+    color: #333;
+    z-index: 1;
+
+  }
+  
+  .desc {
+    margin-top: 5px;
+    font-size: 24px;
+    color: #666;
+    z-index: 1;
+
+  }
