@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    
   }
 
 body{
@@ -38,11 +39,26 @@ h1::after{
     z-index: 2;
 }
 
+h2{
+    font-size: 70px;
+    text-align: center;
+    color: #02ff8d;
+    position: relative;
+}
+
+p{
+    font-size: 30px;
+    
+    
+}
+
 header{
     background-color: #1f3027;
     
     z-index: -2;
 }
+
+
 .navbar{
     display: flex;
   justify-content: space-between; /* Spinge svg a sinistra e nav-wrapper a destra */
@@ -77,6 +93,40 @@ header{
     background-color: #d6f8f6;
     color: #1f3027;
 }
+
+.contact-link {
+    display: flex  ;
+    text-decoration: none;
+    position: relative; /* mantiene il posizionamento, ma senza stacking context */
+    /* rimuovi z-index */
+    background-color: #015f1d;
+    border:none;
+    padding: 20px 40px;
+    border-radius: 1000px;
+    color: #d6f8f6;
+    font-size: 70px;
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+    
+  }
+  
+  .contact-link::after {
+    content: "";
+    position: absolute;
+    width: 105%;
+    height: 109%;
+    background-image: linear-gradient(to bottom right,#5dff6d, #00c8ff);
+    border-radius: 1000px;
+    z-index: -1;
+  }
+  
+
+.contact-link:hover{
+    background-color: transparent;
+    color: #1f3027;
+}
+
 
 .rounded-image {
     position: relative;
@@ -136,6 +186,25 @@ header{
 
 
 /*section*/
+.scroll-view{
+    width: 100%;
+    height: 100vh;
+    
+    animation: scroll 5s linear;
+    animation-timeline: view();
+    animation-range:  entry 0% cover 20%;
+}
+
+@keyframes scroll {
+    0% {
+        opacity: 0.5;
+        transform: translateX(-100%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
 
 .hero-section{
 
@@ -145,12 +214,13 @@ header{
     position: relative;
     align-items: center;
     background-color: #284134;
-    z-index: -2;
+    z-index: 3;
 
 }
 .about-section{
     width: 100%;
-
+    box-shadow: 20px -20px 100px #5dff6d, -20px 20px 100px #00c8ff;
+    height: 50vh;
     position: relative;
     align-items: center;
     background-color: #48755D;
