@@ -315,6 +315,7 @@ header{
     }
     p{
         width: 100%;
+        align-self: center;
         font-size: 40px;
     }
     .navbar{
