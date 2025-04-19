@@ -5,7 +5,7 @@
   }
 
 body{
-    background-color: #C2FBEF;
+    background-color: #284134;
     color: #d6f8f6;
     font-family: 'Jomhuria', cursive;
     font-size: 40px;
@@ -25,8 +25,17 @@ h1{
     font-size: 50px;
     text-align: center;
     color: #d6f8f6;
+    position: relative;
     
-    
+}
+h1::after{
+    content: "⭐";
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    filter: blur(10px);
+    z-index: 2;
 }
 
 header{
@@ -137,6 +146,15 @@ header{
     align-items: center;
     background-color: #284134;
     z-index: -2;
+
+}
+.about-section{
+    width: 100%;
+
+    position: relative;
+    align-items: center;
+    background-color: #48755D;
+    z-index: -2;
 }
 
 .center-div{
@@ -164,10 +182,17 @@ header{
     
 }
 
+
+.svg-transition{
+    display: block; 
+    margin-bottom: -0.4dvh;
+    width: 100%;
+    height: auto;
+}
 .svg-job {
     display: block; 
-    margin-bottom: 50dvh;
-    width: 500px;
+    margin-bottom: 10dvh;
+    width: 600px;
     height: 120px;
 }
 
@@ -236,7 +261,7 @@ header{
         max-height: 300px;
     }
     .svg-job{
-        width: 600px;
+        width: 700px;
         height: 240px;
         
     }
