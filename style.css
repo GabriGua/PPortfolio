@@ -208,7 +208,7 @@ header{
     }
 }
 
-@media (max-width: 700px) {
+@media (max-width: 1080px) {
     body{
         font-size: 80px;
     }
