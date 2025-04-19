@@ -166,7 +166,8 @@ header{
 .svg-job {
     display: block; 
     margin-bottom: 50vh;
-    
+    width: 500px;
+    height: 120px;
 }
 
 .svg-job path {
@@ -228,8 +229,13 @@ header{
         max-width: 300px;
     }
     .image-wrapper {
-        max-width: 150px;
-        max-height: 150px;
+        max-width: 300px;
+        max-height: 300px;
+    }
+    .svg-job{
+        width: 700px;
+        height: 240px;
+        
     }
     .svg-logo{
         width: 100px;
